@@ -10,6 +10,9 @@
     ':automergeMinor', // 自动合并小版本的依赖更新
     ':automergePatch', // 自动合并补丁版本的依赖更新
   ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   baseBranches: [
     'master', // 指定 Renovate 只在 master 分支上运行
   ],
