@@ -1,18 +1,18 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    'config:recommended',
-    ':label(dependencies, devops)',
-    ':maintainLockFilesWeekly',
-    ':automergeLinters',
-    ':automergeTypes',
-    ':automergeMinor',
-    ':automergePatch',
+    'config:recommended', // 使用 Renovate 官方推荐的配置
+    ':label(dependencies, devops)', // 给依赖更新的 PR 打上 dependencies 和 devops 标签
+    ':maintainLockFilesWeekly', // 每周维护一次锁文件
+    ':automergeLinters', // 自动合并 linter 的依赖更新
+    ':automergeTypes', // 自动合并类型定义的依赖更新
+    ':automergeMinor', // 自动合并小版本的依赖更新
+    ':automergePatch', // 自动合并补丁版本的依赖更新
   ],
   baseBranchPatterns: [
-    'master',
+    'master', // 指定 Renovate 只在 master 分支上运行
   ],
   schedule: [
-    '* * * * *',
+    '* * * * *', // 每分钟检查一次依赖更新
   ],
 }
